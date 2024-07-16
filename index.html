@@ -1,0 +1,156 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./resources/style.css" media="screen" />
+
+<html lang="en">
+
+<head>
+  <title>CarFormer: Self-Driving with Learned Object-Centric Representations</title>
+  <meta property="og:image" content="Path to my teaser.jpg" />
+  <meta property="og:title" content="CarFormer" />
+  <meta property="og:description" content="CarFormer" />
+  <meta property="twitter:card" content="CarFormer" />
+  <meta property="twitter:title" content="CarFormer" />
+  <meta property="twitter:description" content="CarFormer" />
+  <meta property="twitter:image" content="Path to my teaser.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Add your Google Analytics tag here -->
+  <script async src="https://www.googletagmanager.com/ns.html?id=GTM-WCRMZRZD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-97476543-1');
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">
+      CarFormer: Self-Driving with Learned Object-Centric Representations
+    </div>
+
+
+    <br><br>
+    <div class="author">
+      <a href="https://shadihamdan.com/" target="_blank">Shadi Hamdan</a>
+      <!-- <sup>1, 2</sup> -->
+    </div>
+    <div class="author">
+      <a href="https://mysite.ku.edu.tr/fguney/" target="_blank">Fatma Guney</a>
+      <!-- <sup>1, 2</sup> -->
+    </div>
+
+    <br><br>
+    <div class="affiliation">
+      <!-- <sup>1&nbsp;</sup> -->
+      <a href="https://cs.ku.edu.tr" target="_blank">Department of Computer
+        Engineering, Koc University</a>
+    </div>
+    <div class="affiliation">
+      <!-- <sup>2&nbsp;</sup> -->
+      <a href="https://ai.ku.edu.tr" target="_blank">KUIS AI Center</a>
+    </div>
+
+
+    <div class="venue">
+      ECCV 2024
+    </div>
+    <br><br>
+
+
+    <div class="links">Paper <a href="https://arxiv.org/" target="_blank"> [arXiv]</a></div>
+    <div class="links">Code <a href="https://github.com/Shamdan17" target="_blank"> [GitHub]</a></div>
+    <div class="links">Cite <a href="./resources/bibtex.txt" target="_blank"> [BibTeX]</a></div>
+
+    <br>
+
+    <img style="width: 80%;" src="./resources/carformer-overview.png" alt="Method overview figure" />
+    <br>
+
+    <hr>
+
+    <br>
+
+    <div class="box"><b>
+        <FONT COLOR="RED">TL;DR</FONT>
+      </b> we introduce <b>CarFormer</b>, an auto-regressive transformer model that can both drive and act as a world
+      model, predicting future states. We show that a learned, self-supervised, object-centric representation for
+      self-driving based on slot attention
+      contains the information necessary for driving such as speed and orientation of vehicles.</div>
+
+    <br>
+
+    <br>
+    <hr>
+
+    <h1>Abstract</h1>
+    <p style="width: 80%;">
+      The choice of representation plays a key role in self-driving. Bird’s eye view (BEV) representations have shown
+      remarkable performance in recent years.
+      In this paper, we propose to learn object-centric representations in BEV to distill a complex scene into more
+      actionable information for self-driving.
+      We first learn to place objects into slots with a slot attention model on BEV sequences.
+      Based on these object-centric representations, we then train a transformer to learn to drive as well as reason
+      about the future of other vehicles.
+      We found that object-centric slot representations outperform both scene-level and object-level approaches that use
+      the exact attributes of objects.
+      Slot representations naturally incorporate information about objects from their spatial and temporal context such
+      as position, heading, and speed without explicitly providing it.
+      Our model with slots achieves an increased completion rate of the provided routes and, consequently, a higher
+      driving score, with a lower variance across multiple runs, affirming slots as a reliable alternaive
+      in object-centric approaches. Additionally, we validate our model’s performance as a world model through
+      forecasting experiments, demonstrating its capability to accurately predict future slot representations.
+    </p>
+
+    <br><br>
+    <hr>
+
+    <h1>What is the best representation of the state?</h1>
+    <img style="width: 64%;" src="./resources/input-representations.png" alt="Ways of representing the input" /><br><br>
+
+    <hr>
+
+    <h1>Quantitative Results</h1>
+
+    <img style="width: 64%;" src="./resources/results-longest6.png" alt="Longest6 results" /><br><br>
+    <p style="width: 80%;">
+      <b>Quantitative Results on Longest6.</b> The average of 3 evaluations on the Longest6 benchmark. We find that
+      CarFormer, using self-supervised
+      slot representations, outperforms other models in terms of driving score.
+    </p>
+    <br><br>
+
+    <img style="width: 54%;" src="./resources/results-forecasting.png" alt="Forecasting results" /><br><br>
+    <p style="width: 80%;">
+      <b>Quantitative Results on forecasting</b> These results show the ability of CarFormer to predict the future BEV
+      representation at T=t+1 and T=t+4.
+      CarFormer outperforms the simple copy baseline.
+    </p>
+
+    <hr>
+
+
+    <h1>Paper</h1>
+
+    <div class="paper-info" style="width: 80%;">
+      <h3>CarFormer: Self-Driving with Learned Object-Centric Representations</h3>
+      <p>Shadi Hamdan and Fatma Guney</p>
+
+      <p>ECCV 2024</p>
+      <pre><code>@InProceedings{TODO}
+                </code></pre>
+    </div>
+
+    <br><br>
+
+  </div>
+
+</body>
+
+</html>

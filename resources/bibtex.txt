@@ -1,0 +1,5 @@
+@InProceedings{Hamdan2024ECCV,
+    author = {Hamdan, Shadi and G\"uney, Fatma},
+    title = {CarFormer: Self-Driving with Learned Object-Centric Representations},
+    booktitle = {European Conference on Computer Vision},
+    year      = {2024}}
