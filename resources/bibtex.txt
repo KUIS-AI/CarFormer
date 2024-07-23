@@ -1,4 +1,4 @@
-@misc{hamdan2024carformerselfdrivinglearnedobjectcentric,
+@misc{hamdan2024carformer,
       title={CarFormer: Self-Driving with Learned Object-Centric Representations}, 
       author={Shadi Hamdan and Fatma Güney},
       year={2024},
